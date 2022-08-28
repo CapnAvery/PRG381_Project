@@ -6,7 +6,8 @@ import java.awt.*;
 public class MainFrame extends JFrame {
 
     public static void main(String[] args) {
-        Student admin = new Student();
-        admin.setVisible(true);
+        Entrance Start = new Entrance();
+
+        Start.setVisible(true);
     }
 }

@@ -36,7 +36,12 @@ public class Entrance extends JFrame {
         button.setFont(mainFont);
         button.addActionListener(arg0 -> {
             welcomeLabel.setText("Welcome " + tfFirstName.getText() + " " + tfLastName.getText());
-            /* Add SQL code to see if the first and last names are inside the database */
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.setVisible(true);
+
+            this.setVisible(false);
         });
 
         JButton ClearAllButton = new JButton("Clear All");

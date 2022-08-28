@@ -70,11 +70,76 @@ public class Student extends JFrame {
         mainPanel.add(emailPanel);
         mainPanel.add(passwordPanel);
 
+        // -------------Buttons------------------
+
+        JButton editButton = new JButton("Confirm Edit");
+        editButton.setFont(mainFont);
+        editButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton NextButton = new JButton("Next record");
+        NextButton.setFont(mainFont);
+        NextButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton PreviousButton = new JButton("Previous record");
+        PreviousButton.setFont(mainFont);
+        PreviousButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton DeleteButton = new JButton("Delete record");
+        DeleteButton.setFont(mainFont);
+        DeleteButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton AddButton = new JButton("Add record");
+        AddButton.setFont(mainFont);
+        AddButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton SearchButton = new JButton("Search record");
+        SearchButton.setFont(mainFont);
+        SearchButton.addActionListener(arg0 -> {
+            /* Add SQL code to see if the first and last names are inside the database */
+        });
+        JButton MainMenuButton = new JButton("Main Menu");
+        MainMenuButton.setFont(mainFont);
+        MainMenuButton.addActionListener(arg0 -> {
+            this.setVisible(false);
+            new MainMenu().setVisible(true);
+        });
+        // -------------Center Layout------------------
+        JPanel CenterPanel = new JPanel();
+        CenterPanel.setLayout(new FlowLayout());
+        CenterPanel.add(PreviousButton);
+        CenterPanel.add(mainPanel);
+        CenterPanel.add(NextButton);
+        // -------------Center Buttons------------------
+        JPanel CenterButtonsPanel = new JPanel();
+        CenterButtonsPanel.setLayout(new FlowLayout());
+        CenterButtonsPanel.add(editButton);
+        CenterButtonsPanel.add(DeleteButton);
+        CenterButtonsPanel.add(AddButton);
+        // -------------Top Buttons------------------
+        JPanel TopButtonsPanel = new JPanel();
+        TopButtonsPanel.setLayout(new FlowLayout());
+        TopButtonsPanel.add(SearchButton);
+        TopButtonsPanel.add(MainMenuButton);
+
+        // -------------Main Piece------------------
+        JPanel MainPanel = new JPanel();
+        MainPanel.setLayout(new FlowLayout());
+        MainPanel.add(TopButtonsPanel);
+
+        MainPanel.add(CenterPanel);
+
+        MainPanel.add(CenterButtonsPanel);
+
         // -------------Frame------------------
         setTitle("Admin");
         setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        add(BaseViewer.createBasePanel(mainPanel));
+        add(MainPanel);
         setVisible(true);
 
     }
