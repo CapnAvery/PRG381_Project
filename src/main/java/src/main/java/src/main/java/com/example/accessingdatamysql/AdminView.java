@@ -89,6 +89,7 @@ public class AdminView extends JFrame {
         SearchButton.setFont(mainFont);
         SearchButton.addActionListener(arg0 -> {
             /* Add SQL code to see if the first and last names are inside the database */
+            int n = 1;
         });
         JButton MainMenuButton = new JButton("Main Menu");
         MainMenuButton.setFont(mainFont);
