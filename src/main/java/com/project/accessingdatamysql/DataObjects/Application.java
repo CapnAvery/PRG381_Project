@@ -10,7 +10,7 @@ public class Application {
 
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
-    Admin admin = new Admin();
+    AdminView admin = new AdminView();
     admin.setVisible(true);
   }
 

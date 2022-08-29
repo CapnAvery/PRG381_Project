@@ -19,21 +19,21 @@ public class MainMenu extends JFrame {
         AdminsButton.setFont(mainFont);
         AdminsButton.addActionListener(arg0 -> {
             this.setVisible(false);
-            Admin adminsView = new Admin();
+            AdminView adminsView = new AdminView();
             adminsView.setVisible(true);
         });
         JButton StudentsButton = new JButton("View Students");
         StudentsButton.setFont(mainFont);
         StudentsButton.addActionListener(arg0 -> {
             this.setVisible(false);
-            Student students = new Student();
+            StudentView students = new StudentView();
             students.setVisible(true);
         });
         JButton RegisterButton = new JButton("View Register");
         RegisterButton.setFont(mainFont);
         RegisterButton.addActionListener(arg0 -> {
             this.setVisible(false);
-            Register register = new Register();
+            RegisterView register = new RegisterView();
             register.setVisible(true);
         });
 
